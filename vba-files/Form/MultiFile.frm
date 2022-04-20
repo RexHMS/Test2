@@ -6,7 +6,7 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} MultiFile
    ClientTop       =   465
    ClientWidth     =   11445
    OleObjectBlob   =   "MultiFile.frx":0000
-   StartUpPosition =   1  '©ÒÄÝµøµ¡¤¤¥¡
+   StartUpPosition =   1  'ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 End
 Attribute VB_Name = "MultiFile"
 Attribute VB_GlobalNameSpace = False
@@ -14,15 +14,6 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Public wtf As Integer
-
-
-
-
-'Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
-
-'Cancel = False
-
-'End Sub
 
 
 Sub CommandButton1_Click()
@@ -39,324 +30,324 @@ Sub CommandButton1_Click()
             Controls("Label" & 23).Visible = True
         Next I
     Else
-        MsgBox "¸ê®Æ¼Æ»Ý >=2 & <= 10 !!", 0 + 64
+        MsgBox "ï¿½ï¿½Æ¼Æ»ï¿½ >=2 & <= 10 !!", 0 + 64
     End If
 
 End Sub
 
 Sub CommandButton2_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         TextBox12.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 
 Sub CommandButton3_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox13.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         
         Next
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 Sub CommandButton4_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox14.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton5_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox15.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton6_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox16.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton7_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox17.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton8_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox18.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton9_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox19.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton10_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox20.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
 Sub CommandButton11_Click()
     Dim fileNameObj As Variant
-    Dim aFile As Variant                            '??¡A´£¨ú¤å¥ó¦WfileName?¨Ï¥Î
+    Dim aFile As Variant                            '??ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WfileName?ï¿½Ï¥ï¿½
   
-     '¥´¶}¤å¥ó¹ï¸Ü®Øªð¦^ªº¤å¥ó¦W¡A¬O¤@­Ó¥þ¸ô®|¤å¥ó¦W¡A¨ä­È¤]¥i¯à¬OFalse¡A¦]¦¹?«¬?Variant
+     'ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½Ü®Øªï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½Oï¿½@ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½È¤]ï¿½iï¿½ï¿½OFalseï¿½Aï¿½]ï¿½ï¿½?ï¿½ï¿½?Variant
     Dim fullName As String
-    Dim Filename As String                         '?FileName¤¤´£¨úªº¸ô?¦W
+    Dim Filename As String                         '?FileNameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½W
   
     Dim I As Integer
   
-    fileNameObj = Application.GetOpenFilename("Excel ¤å¥ó (*.csv),*.csv")
-    '?¥ÎWindows¥´?¤å¥ó??®Ø
-    If fileNameObj <> False Then                   '¦pªG¥¼«ö¡§¨ú®ø¡¨?
+    fileNameObj = Application.GetOpenFilename("Excel ï¿½ï¿½ï¿½ (*.csv),*.csv")
+    '?ï¿½ï¿½Windowsï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½
+    If fileNameObj <> False Then                   'ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         aFile = Split(fileNameObj, "")
   
-        Filename = aFile(UBound(aFile))            '??ªº³Ì¦Z¤@?¤¸¯À?¤å¥ó¦W
+        Filename = aFile(UBound(aFile))            '??ï¿½ï¿½ï¿½Ì¦Zï¿½@?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½W
         fullName = aFile(0)
         '//////////////////////
         TextBox21.Text = fullName
-        For I = 1 To UBound(aFile)                 '´`?¦X¦¨¥þ¸ô?
+        For I = 1 To UBound(aFile)                 'ï¿½`?ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             
         Next
   
     Else
-        MsgBox "½Ð¿ï¾ÜLog"
+        MsgBox "ï¿½Ð¿ï¿½ï¿½Log"
     End If
-    '±o¨ìExcel¥þ¸ô?
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½?
     allExcelFullPath = fullName
-    '±o¨ìExcel¤å¥ó¦W
+    'ï¿½oï¿½ï¿½Excelï¿½ï¿½ï¿½W
     workbookName = Filename
 End Sub
 
