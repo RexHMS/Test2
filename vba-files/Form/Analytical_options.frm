@@ -6,7 +6,7 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} Analytical_options
    ClientTop       =   465
    ClientWidth     =   4905
    OleObjectBlob   =   "Analytical_options.frx":0000
-   StartUpPosition =   1  'ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   StartUpPosition =   1  '©ÒÄÝµøµ¡¤¤¥¡
 End
 Attribute VB_Name = "Analytical_options"
 Attribute VB_GlobalNameSpace = False
@@ -18,11 +18,14 @@ Sub CommandButton1_Click()
 
     If OptionButton2.Value = True Then
         Call Multiple.OpFcount
-    
+    'Else
+        'Multiple.OF = 999
     End If
 Unload Me
 MainSheet = ActiveWorkbook.name
 
+'Workbooks(MainSheet).Sheets(1).Range("A2") = Multiple.MyArray(1)
+'Workbooks(MainSheet).Sheets(1).Range("A3") = Multiple.OF
 End Sub
 
 Private Sub OptionButton1_Click()
